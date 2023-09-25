@@ -45,7 +45,7 @@ const select = ref(false);
 const getPj = async () => {
     const { data } = await axios.get(url)
     pj.value = data.data.results.filter(pjs => {
-        return !pjs.thumbnail.path.includes("image_not_available");
+        return !pjs.thumbnail.path.includes("Imagen no disponible");
     })
 
 }
