@@ -9,7 +9,7 @@
 
 	</v-layout>
 
-	<main class="content">
+	<main>
 		<slot />
 
 	</main>
