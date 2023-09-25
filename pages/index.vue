@@ -2,7 +2,7 @@
     <v-container class="container">
         <v-row>
             <v-col v-for="item in pj" :key="item.id" cols="12" sm="4">
-                <v-card class="mx-auto" max-width="344" >
+                <v-card class="card">
                     <v-img :src="item.thumbnail.path + '.' + item.thumbnail.extension" height="200px" cover></v-img>
 
                     <v-card-title>
@@ -14,7 +14,7 @@
                     </v-card-subtitle>
 
                     <v-card-actions>
-                        <v-btn color="orange-lighten-2" variant="text"  @click="description(item)">
+                        <v-btn color="red" variant="text"  @click="description(item)">
                             Ver detalles
                         </v-btn>
                     </v-card-actions>
@@ -70,7 +70,7 @@ const description = (pjs) => {
 
 .card {
     margin: 1rem;
-    cursor: pointer;
+    max-width: 344;
 }
 
 .img {
