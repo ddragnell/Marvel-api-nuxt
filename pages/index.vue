@@ -1,8 +1,4 @@
 <template>
-    <br>
-    <br>
-    <br>
-    <br>
     <v-container class="container">
         <v-row>
             <v-col v-for="item in pj" :key="item.id" cols="12" sm="4">
@@ -63,6 +59,7 @@ const description = (pjs) => {
 
 <style>
 .container {
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
