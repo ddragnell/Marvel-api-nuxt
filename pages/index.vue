@@ -20,12 +20,15 @@
                     </v-card-actions>
                 </v-card>
             </v-col>
-            <v-card >
-                <v-dialog v-model="select" width="auto">
-                    <card-des :pjs="actualPj"></card-des>
-                    <v-btn color="red" class="btn" block @click="select = false">Cerrar</v-btn>
-                </v-dialog>
-            </v-card>
+            <div>
+                <v-card>
+                    <v-dialog v-model="select" width="auto">
+                        <card-des :pjs="actualPj"></card-des>
+                        <v-btn color="red" class="btn" block @click="select = false">Cerrar</v-btn>
+                    </v-dialog>
+                </v-card>
+            </div>
+
         </v-row>
     </v-container>
 </template>
@@ -66,9 +69,10 @@ const description = (pjs) => {
 <style>
 .container {
     margin-top: 100px;
+    margin-left: 130px !important;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: justify !important;
+    align-items: center !important;
     flex-wrap: wrap;
     list-style-type: none;
     padding: 0;
@@ -82,5 +86,15 @@ const description = (pjs) => {
 .img {
     object-fit: cover;
     height: 14.5rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+
 }
 </style>
