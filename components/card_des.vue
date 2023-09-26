@@ -25,6 +25,10 @@
                             <li class="li"> Cantidad de eventos: {{ pjs.events.available }} </li>
                         </ul>
                     </v-card>
+                    <br>
+                    <v-row class="description">
+                        <li class="li"> Descripción: {{ pjs.description || "No cuenta con descripción"}}</li>
+                    </v-row>
                 </v-col>
             </v-row>
         </v-col>
@@ -76,7 +80,7 @@ export default {
     display: flex !important;
     justify-content: center !important;
     flex-direction: column !important;
-    height: 335px !important;
+    height: 355px !important;
     margin-top: 45px !important;
 }
 
@@ -89,5 +93,9 @@ export default {
     box-shadow: inset 0 0 0 10px #c9c6c6;
     border: 10px solid transparent;
     border-radius: 40px;
+}
+
+.description {
+    width: 65%
 }
 </style>
