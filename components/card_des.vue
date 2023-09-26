@@ -10,7 +10,7 @@
             </v-row>
             <v-row>
                 <v-col>
-                    <v-card class="details">
+                    <v-card elevation-15 class="details">
                         <ul>
                             <li class="li"> Cantidad de comics: {{ pjs.comics.available }} </li> <br>
                             <li class="li"> Cantidad de series: {{ pjs.series.available }} </li> <br>
@@ -76,6 +76,8 @@ export default {
     display: flex !important;
     justify-content: center !important;
     flex-direction: column !important;
+    height: 335px !important;
+    margin-top: 45px !important;
 }
 
 ::-webkit-scrollbar {
