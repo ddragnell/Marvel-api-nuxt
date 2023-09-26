@@ -71,7 +71,7 @@ export default {
 
 .header {
     font-size: 23px;
-    align-items: center;
+    align-items: center !important;
     margin: auto !important;
     color: rgb(255, 0, 0)
 }
@@ -80,7 +80,7 @@ export default {
     display: flex !important;
     justify-content: center !important;
     flex-direction: column !important;
-    height: 355px !important;
+    height: 340px !important;
     margin-top: 45px !important;
 }
 
