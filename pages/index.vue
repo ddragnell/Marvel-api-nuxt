@@ -14,12 +14,18 @@
                     </v-card-subtitle>
 
                     <v-card-actions>
-                        <v-btn color="red" variant="text"  @click="description(item)">
+                        <v-btn color="red" variant="text" @click="description(item)">
                             Ver detalles
                         </v-btn>
                     </v-card-actions>
                 </v-card>
             </v-col>
+            <v-card >
+                <v-dialog v-model="select" width="auto">
+                    <card-des :pjs="actualPj"></card-des>
+                    <v-btn color="red" class="btn" block @click="select = false">Cerrar</v-btn>
+                </v-dialog>
+            </v-card>
         </v-row>
     </v-container>
 </template>
@@ -27,7 +33,7 @@
 
 <script setup>
 
-
+import card_des from '~/components/card_des.vue';
 import axios from 'axios';
 
 onBeforeMount(() => {
